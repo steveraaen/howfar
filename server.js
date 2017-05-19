@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Places = require("./src/models/Places.js");
-var pwds = require("./pass")
+var pwds = require("./pass");
 // ----------------------------------------
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -27,7 +27,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-/*app.get("/api", function(req, res) {
+app.get("/api", function(req, res) {
   Places.find({}).sort([
     ["date", "descending"]
   ]).limit(5).exec(function(err, doc) {
@@ -38,7 +38,7 @@ app.get("/", function(req, res) {
       res.send(doc);
     }
   });
-});*/
+});
 
 app.post('/api', function(req, res) {
 

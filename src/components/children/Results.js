@@ -1,4 +1,5 @@
 var React = require("react");
+var Maps = require("./Maps");
 
 
 var Results = React.createClass({
@@ -14,14 +15,15 @@ var Results = React.createClass({
         <div className="panel-body text-center">
          { <ul>
           {this.props.r.features.map((search, i) => {
+
             return (
 
-              <li onClick={() => this.handleClick()} key={i}>{search.properties.formatted}  - {search.properties.components._type}</li>
+              <li onClick={() => this.handleClick(i)} key={i}>{search.properties.formatted}  - {search.properties.components._type}</li>
             );
           })}
           </ul>}
         </div>
-         
+         <Maps />
       </div>
     );
   }

@@ -1,11 +1,12 @@
 var axios = require("axios");
+var pwds = require("../../pass");
 
 var helper = {
     runQuery: function(place) {
         var place;
         var min_confidence = 9;
-        var geocodeAPI = "282fd4ff531cf824eb6466ab401c53d4";
-        var queryURL = "http://api.opencagedata.com/geocode/v1/geojson?no_annotations=1&query=" + place + "&min_confidence"+ min_confidence + "&limit=1&pretty=1&key=" + geocodeAPI;
+
+        var queryURL = "http://api.opencagedata.com/geocode/v1/geojson?no_annotations=1&query=" + place + "&min_confidence"+ min_confidence + "&limit=3&pretty=1&key=" + pwds.geocodeAPI;
 
         return axios.get(queryURL).then(function(response) {
             if (response.data.features) {
