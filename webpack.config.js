@@ -8,7 +8,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'react-hot-loader!babel-loader'
+      loader: 'babel-loader'
     }]
   },
   resolve: {

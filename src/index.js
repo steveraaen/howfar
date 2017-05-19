@@ -1,11 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+var React = require("react");
+var ReactDOM = require("react-dom");
+var Main = require("./components/Main");
 
-const title = 'My Minimal React Webpack Babel Setup';
-
-ReactDOM.render(
-  <div>{title}</div>,
-  document.getElementById('app')
-);
-
-module.hot.accept();
+ReactDOM.render(<Main />, document.getElementById("app"));
