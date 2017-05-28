@@ -1,8 +1,9 @@
 var React = require("react");
-var Maps = require("./Maps");
 
+/*var Maps = require('./Maps').Map;*/
+  
 
-var Results = React.createClass({
+var Results = React.createClass ({
   handleClick: function(e){
     console.log(this.props); 
   },
@@ -23,11 +24,11 @@ var Results = React.createClass({
           })}
           </ul>}
         </div>
-         <Maps />
+
       </div>
     );
   }
 });
 
-module.exports = Results;
+module.exports = Results
 

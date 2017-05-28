@@ -27,7 +27,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/api", function(req, res) {
+/*app.get("/api", function(req, res) {
   Places.find({}).sort([
     ["date", "descending"]
   ]).limit(5).exec(function(err, doc) {
@@ -38,10 +38,10 @@ app.get("/api", function(req, res) {
       res.send(doc);
     }
   });
-});
-
+});*/
+  
 app.post('/api', function(req, res) {
-
+    console.log(req.body)
         Places.create({
             placeArray: req.body
         })

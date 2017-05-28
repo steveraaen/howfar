@@ -37,10 +37,11 @@
   "dependencies": {
     "axios": "^0.16.1",
     "express": "^4.15.3",
-    "mongoose": "^4.10.0",
+    "mongoose": "^4.10.3",
     "react": "^15.5.4",
     "react-d3-map": "^0.8.3",
     "react-dom": "^15.5.4",
+    "topojson": "^3.0.0",
     "webpack": "^2.5.1"
   }
 }
